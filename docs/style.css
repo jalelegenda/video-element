@@ -1,0 +1,241 @@
+@font-face {
+    font-family: blowbrush;
+    src: url("fonts/blowbrush.ttf");
+}
+
+/*Global*/
+* {
+    font-family: 'Open sans', 'sans-serif';
+}
+
+h1 {
+    font-family: blowbrush;
+}
+
+h2, h3, h4, h5 {
+    color: #444;
+    font-weight: bold;
+}
+
+header {
+    align-items: center;
+    background: rgba(138, 138, 138, 0) linear-gradient(to bottom, rgba(0,0,0,0.08) 20%, rgba(0,0,0,0));
+    height: 70px;
+    justify-content: center;
+}
+
+p {
+    color: white;
+    font-size: 1.1em;
+}
+
+section {
+    height: 95vh;
+    text-shadow: 1px 2px 15px rgba(0, 0, 0, .2);
+}
+
+    section .container {
+        padding: 100px;
+    }
+
+    section .banner {
+        text-align: left;
+    }
+
+    section .header {
+        margin-top: -0.4em;
+    }
+
+    section .text {
+        display: flex;
+        flex-flow: column;
+        font-size: 1.2em;
+    }
+
+    section .text.end {
+        justify-content: flex-end;
+    }
+
+    section .text.center {
+        justify-content: center;
+    }
+    
+    section .heading {
+        position: relative;
+    }
+
+    section .heading h1 {
+        font-size: 4.2em;
+    }
+
+    section .heading h1 + .border {
+        background-color: rgb(22, 150, 49);
+        border-radius: 2px;
+        bottom: 5px;
+        height: 5px;
+        position: absolute;
+        width: 25%;
+    }
+
+    section .heading h1 + .border-right {
+        right: 10px;
+    }
+
+    section .heading h1 + .border-left {
+        left: 10px;
+    }
+
+
+/*Utility*/
+
+.heading-container {
+    height: 70vh;
+}
+
+.separator.narrow {
+    background-image: linear-gradient(to bottom, rgba(241, 137, 33, 1) 35%, rgba(241, 148, 40, 1));
+    height: 70px;
+    box-shadow: 0px -3px 18px rgba(0,0,0,0.35);
+}
+
+.separator.wide {
+    height: 150px;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0), inset 0px -3px 18px rgba(0, 0, 0, 0.3);
+}
+
+.separator.thin {
+    height: 4px;
+    box-shadow: 0px -3px 14px rgba(0,0,0,.3);
+}
+
+.text-container{
+    background: rgba(0,0,0,.3);
+    height: 25vh;
+    margin-left: -30px;
+    padding-left: 25px;
+    width: 100vw;
+}
+
+/* Layout */
+.text-right-align {
+    text-align: right !important;
+}
+
+.text-left-align {
+    text-align: left !important;
+}
+
+.text-center-align {
+    text-align: center !important;
+}
+
+/*Colors*/
+
+.bright {
+    background-color: rgb(255, 249, 230) !important;
+}
+
+.dark {
+    background-color: rgb(80, 215, 90) !important;
+}
+
+fizzy {
+    background-color: rgb(242, 250, 0);
+}
+
+.mono {
+    background-color: rgb(250, 245, 238) !important;
+}
+
+.vibrant {
+    background-color: rgb(215, 254, 251);
+}
+
+.theme-vibrant {
+    background-color: rgb(241, 137, 33) !important;
+}
+
+.theme-calm {
+    background-color: rgb(0, 90, 145)
+}
+
+
+.text-bright {
+    color: rgb(255, 238, 176) !important;
+}
+
+.text-dark {
+    color: rgb(80, 215, 90) !important;
+}
+
+.text-mono {
+    color: rgb(250, 245, 238) !important;
+}
+
+.text-vibrant {
+    color: rgb(215, 254, 251);
+}
+
+.text-theme-vibrant {
+    color: rgb(241, 137, 33) !important;
+}
+
+.text-theme-calm {
+    color: rgb(0, 90, 145)
+}
+
+
+
+/*Banners*/
+section#home {
+    background-attachment: fixed;
+    background-image: url("images/home.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-top: -100px;
+    padding: 150px 50px 200px 50px;
+}
+
+section#o-nama {
+    background-attachment: fixed;
+    background-image: url("images/o-nama.jpg");
+    background-position: 46% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+    #o-nama h1 {
+        font-size: 6.2em;
+    }
+
+section#usluge {
+    padding: 0 0 100px 0;
+}
+
+
+/*Navigation*/
+#nav {
+    text-align: center;
+}
+
+#nav a {
+    background: rgba(0,0,0,0);
+    color: rgba(241, 137, 33, 1);
+    font-size: 3em;
+    font-family: "blowbrush", 'sans-serif';
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.43);
+}
+
+.logo img {
+    height: 80%;
+    width: auto;
+}
+
+    #home img {
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.43));
+        height: auto;
+        opacity: 0;
+        width: 260px;
+    }
