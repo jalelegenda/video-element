@@ -13,7 +13,7 @@ h1 {
 }
 
 h2, h3, h4, h5 {
-    color: #444;
+    color: rgb(241, 137, 33);
     font-weight: bold;
 }
 
@@ -22,6 +22,12 @@ header {
     background: rgba(138, 138, 138, 0) linear-gradient(to bottom, rgba(0,0,0,0.08) 20%, rgba(0,0,0,0));
     height: 70px;
     justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
 }
 
 p {
@@ -42,7 +48,8 @@ section {
         text-align: left;
     }
 
-    section .header {
+    section .header,
+    footer .header {
         margin-top: -0.4em;
     }
 
@@ -110,13 +117,53 @@ section {
         }
 
     section#usluge {
-        height: 80vh;
-        padding: 10px 0 10px 0;
+        height: 90vh;
+        padding: 10px 0 20px 0;
     }
 
-        section#usluge .showcase-banner {
-            background: url("images/")
+        #usluge h1 {
+            font-size: 6.2em;
+            margin-top: -.5em;
+            text-align: right;
         }
+
+        section#usluge #promidzba .showcase-element {
+            background-image: url("images/promidzba.jpg");
+        }
+
+        section#usluge #usluge .showcase-element {
+            background-image: url("images/usluge.jpg");
+        }
+        
+        section#usluge #edukacija .showcase-element {
+            background-image: url("images/edukacija.jpg");
+            background-position: 30% 35%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+footer {
+    align-items: flex-end;
+    background-color: #000;
+    background-image: url("images/footer.jpg");
+    background-position: 50% 40%;
+    background-size: cover;
+    height: 90vh;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+}
+
+    footer h1 {
+        font-size: 6.7em;
+    }
+
+    footer > div {
+        background-color: rgba(0,0,0,.6);
+        height: 100%;
+        padding: 0 .75rem;
+        width: auto;
+    }
 
 /*Utility*/
 
@@ -148,8 +195,8 @@ section {
 }
 
 .showcase {
-    height: 100%;
     padding-left: 10px;
+    height: 85%;
 }
 
 .showcase .col {
@@ -158,18 +205,43 @@ section {
 
     .showcase .showcase-element {
         background-color: rgb(255, 249, 230);
+        box-shadow: 1px 3px 18px 0px rgba(0,0,0,0.1);
         height: 100%;
         margin-right: 10px;
+        padding-top: 70%;
         text-align: center;
     }
-
-    .showcase .showcase-element .showcase-banner {
-        height: 55%;
-    }
+    
     .showcase .showcase-element .showcase-content {
-        height:45%;
+        background-color: rgba(0,0,0,.5);
+        border-top: 4px solid rgb(241, 137, 33);
+    }
+    
+    .showcase .showcase-element .showcase-content .icon-container {
+        background-color: rgb(241, 137, 33);
+        border-radius: 100px;
+        display: flex;
+        margin: -10% auto 0 auto;
+        height: 100px;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
     }
 
+    .showcase .showcase-element .showcase-content .icon-container > div {
+        align-items: center;
+        background-color: rgb(255, 249, 230);
+        border-radius: 92px;        
+        box-shadow: inset 3px 3px 10px -4px rgba(0,0,0,.2);
+        display: flex;
+        height: 92px;
+        justify-content: center;
+        width: 92px;
+    }
+
+    .showcase .showcase-element .showcase-content .icon-container i {
+        font-size: 3.7em;
+    }
 /* Layout */
 .text-right-align {
     text-align: right !important;
@@ -194,7 +266,7 @@ section {
 }
 
 .fizzy {
-    background-color: rgb(242, 250, 0) !important;
+    background-color: rgb(242, 250, 100) !important;
 }
 
 .mono {
@@ -202,7 +274,7 @@ section {
 }
 
 .vibrant {
-    background-color: rgb(215, 254, 251);
+    background-color: rgb(235, 254, 251) !important;
 }
 
 .theme-vibrant {
@@ -210,7 +282,7 @@ section {
 }
 
 .theme-calm {
-    background-color: rgb(0, 90, 145)
+    background-color: rgb(0, 90, 145) !important;
 }
 
 
