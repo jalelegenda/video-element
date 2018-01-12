@@ -1,3 +1,9 @@
 local-docs
 .vscode
 node_modules
+dist
+docs
+sass
+webpack-config.js
+package-lock.json
+package.json
