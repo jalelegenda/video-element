@@ -11,22 +11,33 @@
     <body id="body">
         <header>
             <ul>
-                <li><h2><a href="#home">Home</a></h2></li>
-                <li><h2><a href="#o-nama">O nama</a></h2></li>
-                <li><h2><a href="#usluge">Usluge</a></h2></li>
-                <li><h2><a href="#kontakt">Kontakt</a></h2></li>
+                <li id="home-link">
+                    <h2><a href="#home">Home</a></h2>
+                    <div class="anchor-indicator"></div>
+                </li>
+                <li id="o-nama-link">
+                    <h2><a href="#o-nama">O nama</a></h2>
+                    <div class="anchor-indicator"></div>
+                </li>
+                <li id="usluge-link">
+                    <h2><a href="#usluge">Usluge</a></h2>
+                    <div class="anchor-indicator"></div>
+                </li>
+                <li id="kontakt-link">
+                    <h2><a href="#kontakt">Kontakt</a></h2>
+                    <div class="anchor-indicator"></div>
+                </li>
             </ul>
             <button><i class="fa fa-bars fa-3x" aria-hidden="true"></i></button>
         </header>
-
         <section id="home">
             <div class="logo-container item i-2 right">
                 <img id="home-logo" src="images/Logo_S.png" alt="Video Element">
             </div>
-            <article class="item i-2 a-right" >
+            <article class="item i-2 right" >
                 <div class="heading heading-right">
                     <h1 class="text-theme-vibrant">
-                        Dobro došli!
+                        Dobro<br/>došli!
                     </h1>
                     <div class="border"></div>
                 </div>
@@ -112,14 +123,30 @@
 
         <div class="separator narrow theme-calm"></div>
         <div class="separator thin dark"></div>
-        <div class="separator wide mono"></div>
+        <div class="separator wide mono sticky-container"></div>
         <div class="separator thin theme-vibrant"></div>
         
-        <footer id="footer">
+        <footer class="bright" id="footer">
             <div class="heading heading-left">
                 <h1 class="text-theme-vibrant">Kontakt</h1>
                 <div class="border"></div>
             </div>
+            <nav class="sticky-nav sn-bottom">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/dianomaya/"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dianomaya/"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC5uuB82XuqPkh9EoF4UGQXQ"><i class="fa fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://dianomaya.com/"><i class="fa fa-globe"></i></a>
+                    </li>
+                </ul>
+            </nav>
             <div id="kontakt">
                 <div class="item">
                     <h3>Lokacija:</h3>
