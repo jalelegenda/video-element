@@ -9,10 +9,30 @@
         <title>Video Element</title>
     </head>
     <body id="body">
-        <header><button><i class="fa fa-bars fa-3x" aria-hidden="true"></i></button></header>
+        <button id="menu-trigger"><i class="fa fa-bars fa" aria-hidden="true"></i></button>
+        <header>
+            <ul id="responsive-navigation">
+                <li id="home-link">
+                    <a href="#home">Home</a>
+                    <div class="anchor-indicator"></div>
+                </li>
+                <li id="o-nama-link">
+                    <a href="#o-nama">O nama</a>
+                    <div class="anchor-indicator"></div>
+                </li>
+                <li id="usluge-link">
+                    <a href="#usluge">Usluge</a>
+                    <div class="anchor-indicator"></div>
+                </li>
+                <li id="kontakt-link">
+                    <a href="#kontakt">Kontakt</a>
+                    <div class="anchor-indicator"></div>
+                </li>
+            </ul>
+        </header>
         <nav>
             <ul id="main-navigation" class="item">
-                <li id="home-link">
+                <li id="home-link" class="active">
                     <a href="#home">Home</a>
                     <div class="anchor-indicator"></div>
                 </li>
@@ -63,7 +83,7 @@
 
             <div class="separator narrow theme-vibrant"></div>
             <div class="separator thin theme-calm"></div>
-            <div class="container wide calm"></div>
+            <div class="separator wide calm"></div>
             <div class="separator thin theme-calm"></div>
 
             <section id="o-nama">
@@ -78,15 +98,15 @@
                 
                 <article>
                     <h3>Mi smo Diano &amp; Maya i društvene mreže su naša strast!</h3>
-                    <p>Nakon višegodišnjeg korištenja, učenja i istraživanja Facebook-a, Instagram-a i YouTube-a, odlučili smo svo naše znanje podijeliti sa vama!</p>
-                    <p>Danas nam je potrebno mnogo više od osnova poznavanja društvenih mreža kako bi oglašavali svoj proizvod ili uslugu na društvenim mrežama.</p>
+                    <p>Nakon višegodišnjeg korištenja, učenja i istraživanja Facebook-a, Instagram-a i YouTube-a, odlučili smo svo naše znanje podijeliti sa vama!
+                    Danas nam je potrebno mnogo više od osnova poznavanja društvenih mreža kako bi oglašavali svoj proizvod ili uslugu na društvenim mrežama.</p>
                     <h4>Ne trošite novce uzalud!</h4>
                 </article>
             </section>
             
             <div class="separator narrow theme-calm"></div>
             <div class="separator thin dark"></div>
-            <div class="container wide mono"></div>
+            <div class="separator wide mono"></div>
             <div class="separator thin theme-calm"></div>
 
 
@@ -139,14 +159,14 @@
 
             <div class="separator narrow theme-calm"></div>
             <div class="separator thin dark"></div>
-            <div class="container wide mono">
-                <div class="heading heading-left">
-                    <h1 class="text-theme-vibrant">Kontakt</h1>
-                    <div class="border"></div>
-                </div></div>
+            <div class="separator wide mono"></div>
             <div class="separator thin theme-vibrant"></div>
             
             <footer class="bright" id="footer">
+                <div class="heading heading-right">
+                    <h1 class="text-theme-vibrant">Kontakt</h1>
+                    <div class="border"></div>
+                </div>
                 <div id="kontakt">
                     <div class="item">
                         <h3>Lokacija:</h3>
