@@ -351,7 +351,6 @@ footer {
     background-image: url("images/footer.jpg");
     background-position: 40% 30%;
     background-size: cover;
-    min-height: 812px;
 }
 
 #kontakt {
