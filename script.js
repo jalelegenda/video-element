@@ -126,25 +126,26 @@ document.addEventListener("DOMContentLoaded", function(){
         
         removeActiveLinks();
         
-        if(homeOffset.top <= 100 && homeOffset.bottom > 0) {
-            removeActiveLinks()
-            els.responsiveLinks.home.classList.add("active");
-            els.mainLinks.home.classList.add("active");
-        }
-        else if(oNamaOffset.top <= 100 && oNamaOffset.bottom > 0) {
+        if((kontaktOffset.bottom - window.innerHeight < 10)
+        || (kontaktOffset.top <= 200 && kontaktOffset.bottom > 100)) {
             removeActiveLinks();
-            els.responsiveLinks.oNama.classList.add("active");
-            els.mainLinks.oNama.classList.add("active");
+            els.responsiveLinks.kontakt.classList.add("active");
+            els.mainLinks.kontakt.classList.add("active");
         }
-        else if(uslugeOffset.top <= 100 && uslugeOffset.bottom > 0) {
+        else if(uslugeOffset.top <= 100 && uslugeOffset.bottom > 100) {
             removeActiveLinks();
             els.responsiveLinks.usluge.classList.add("active");
             els.mainLinks.usluge.classList.add("active");
         }
-        else if(kontaktOffset.top <= 200 && kontaktOffset.bottom > 0){
+        else if(oNamaOffset.top <= 100 && oNamaOffset.bottom > 100) {
             removeActiveLinks();
-            els.responsiveLinks.kontakt.classList.add("active");
-            els.mainLinks.kontakt.classList.add("active");
+            els.responsiveLinks.oNama.classList.add("active");
+            els.mainLinks.oNama.classList.add("active");
+        }
+        else if(homeOffset.top <= 100 && homeOffset.bottom > 100) {
+            removeActiveLinks()
+            els.responsiveLinks.home.classList.add("active");
+            els.mainLinks.home.classList.add("active");
         }
     }
 

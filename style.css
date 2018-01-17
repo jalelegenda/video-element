@@ -347,16 +347,18 @@ main {
 }
 
 
-#footer {
+footer {
     background-image: url("images/footer.jpg");
     background-position: 40% 30%;
     background-size: cover;
+    min-height: 812px;
 }
 
 #kontakt {
     background-color: rgba(0,0,0,.6);
     display: flex;
     flex-flow: row wrap;
+    min-height: 100px;
 }
 
 #kontakt p {
