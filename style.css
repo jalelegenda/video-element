@@ -38,40 +38,6 @@ header {
     display: none;
 }
 
-@media all and (max-width: 900px) {
-    header {
-        background-color: rgba(0,0,0,.6);
-        display: flex;
-        flex-flow: column;
-        height: 170px;
-        justify-content: center;
-        position: fixed;
-        margin-top: -170px;
-        transition: margin .4s ease-in-out;
-        width: 100%;
-        z-index: 500;
-    }
-
-    header #responsive-navigation {
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    header #responsive-navigation li.active {
-        color: rgb(241, 137, 33);
-    }
-
-    header .social-links {
-        align-items: center;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    header .social-links li {
-        padding: 0 10px;
-    }
-}
-
 footer,
 section {
     min-height: 100vh;
@@ -203,6 +169,30 @@ article p {
 }
 
 
+@media all and (max-width: 900px) {
+    header {
+        background-color: rgba(0,0,0,.6);
+        display: flex;
+        flex-flow: column;
+        height: 170px;
+        justify-content: center;
+        position: fixed;
+        margin-top: -170px;
+        transition: margin .4s ease-in-out;
+        width: 100%;
+        z-index: 500;
+    }
+
+    header #responsive-navigation {
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    header #responsive-navigation li.active {
+        color: rgb(241, 137, 33);
+    }
+}
+
 
 nav {
     align-content: center;
@@ -229,7 +219,7 @@ nav li {
 }
 
 @media (hover: hover) {
-    nav li:hover {
+    li:hover {
         color: rgb(241, 137, 33);
     }
 }
@@ -360,17 +350,27 @@ footer {
 #kontakt {
     background-color: rgba(0,0,0,.6);
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     min-height: 100px;
+}
+
+#info {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 #kontakt p {
     margin-bottom: 15px;
 }
 
+#kontakt ul {
+    align-self: center;
+    flex-flow: row;
+}
+
 @media all and (max-width: 900px)
 {
-    #kontakt {
+    #info {
         flex-flow: column;
     }
 }
@@ -524,10 +524,10 @@ footer {
 .showcase .showcase-element {
     background-color: rgb(255, 249, 230);
     box-shadow: 1px 3px 18px 0px rgba(0,0,0,0.4);
-    height: 50%;
+    height: 30%;
     margin: 10px 0 10px 10px;
     overflow: hidden;
-    padding-top: 50%;
+    padding-top: 70%;
     text-align: center;
     transition: all .4s ease-in-out;
 }
@@ -550,6 +550,17 @@ footer {
 
 .showcase .showcase-element .showcase-content .circle-frame i {
     margin-top: 12.5px;
+}
+
+.social-links {
+    align-items: center;
+    flex-flow: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-links li {
+    padding: 0 10px;
 }
 
 @media all and (max-width: 900px) {

@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function(){
         removeActiveLinks();
         
         if((kontaktOffset.bottom - window.innerHeight < 10)
-        || (kontaktOffset.top <= 200 && kontaktOffset.bottom > 100)) {
+        || (kontaktOffset.top <= 100 && kontaktOffset.bottom > 100)) {
             removeActiveLinks();
             els.responsiveLinks.kontakt.classList.add("active");
             els.mainLinks.kontakt.classList.add("active");
