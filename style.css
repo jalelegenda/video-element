@@ -74,7 +74,7 @@ header {
 
 footer,
 section {
-    min-height: 700px;
+    min-height: 100vh;
     justify-content: space-between;
 }
 
@@ -262,19 +262,18 @@ main {
 
 
 #home {        
-    background-image: url("images/home.jpg");
+    background-image: url("images/home1.jpeg");
     background-position: 53% 90%;
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: space-between;
-    height: 850px;
     padding: 0 50px;
 }
 
 #home-logo {
     align-self: center;
     filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.43));
-    margin: 0;
+    margin-top: 50px;
     width: 175px;
 }
 
@@ -293,9 +292,13 @@ main {
 }
 
 #menu-trigger {
-    position: fixed;
+    background: rgba(0,0,0,.4);
+    border-radius: 3px;
+    height: 30px;
     left: 10px;
+    position: fixed;
     top: 10px;
+    width: 33px;
     z-index: 1000;
 }
 
@@ -308,7 +311,6 @@ main {
     background-position: 46% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 850px;
 }
 
 #o-nama article {
@@ -318,6 +320,8 @@ main {
 }
 
 #usluge {
+    flex-flow: column;
+    justify-content: center;
     padding-bottom: 20px;
 }
 
@@ -514,28 +518,18 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    min-height: 650px;
     padding-right: 10px;
-    overflow: scrol;
 }
 
 .showcase .showcase-element {
     background-color: rgb(255, 249, 230);
     box-shadow: 1px 3px 18px 0px rgba(0,0,0,0.4);
+    height: 50%;
     margin: 10px 0 10px 10px;
-    height: 325px;
     overflow: hidden;
-    padding-top: 325px;
+    padding-top: 50%;
     text-align: center;
     transition: all .4s ease-in-out;
-}
-
-@media (hover: hover) {
-    .showcase .showcase-element:hover {
-        cursor: pointer;
-        height: 650px;
-        padding-top: 0;
-    }
 }
 
 .showcase .showcase-element .showcase-content {
@@ -543,13 +537,6 @@ footer {
     border-top: 3px solid rgb(241, 137, 33);
     height: 100%;
     transition: all .4s ease-out;
-}
-
-@media (hover: hover) {
-        .showcase .showcase-element:hover .showcase-content {
-        padding-top: 250px;
-        height: 400px;
-    }
 }
 
 .showcase .showcase-element .showcase-content .circle-frame {
@@ -577,7 +564,6 @@ footer {
         padding-top: 250px;
     }
 }
-
 
 /*Colors*/
 
