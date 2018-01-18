@@ -335,7 +335,7 @@ main {
 
 #edukacija {
     background-image: url("images/edukacija.jpg");
-    background-position: 30% 35%;
+    background-position: 30% 25%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -372,6 +372,7 @@ footer {
 {
     #info {
         flex-flow: column;
+        max-height: 200px;
     }
 }
 /*Utility*/
@@ -467,27 +468,11 @@ footer {
 
 
 .item {
-    flex-grow: 1;
-}
-
-.item.i-2 {
-    flex-basis: 50% !important;
+    flex: 1 1 auto;
 }
 
 .item.i-3 {
     flex-basis: 33% !important;
-}
-
-.item.i-4 {
-    flex-basis: 25% !important;
-}
-
-.item.i-23 {
-    flex-basis: 66% !important;
-}
-
-.item.i-34 {
-    flex-basis: 75% !important;
 }
 
 .logo-container {
@@ -518,16 +503,24 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    min-height: 600px;
     padding-right: 10px;
+}
+
+.showcase .item {
+    display: flex;
+    min-height: 600px;
 }
 
 .showcase .showcase-element {
     background-color: rgb(255, 249, 230);
     box-shadow: 1px 3px 18px 0px rgba(0,0,0,0.4);
-    height: 30%;
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    justify-content: flex-end;
     margin: 10px 0 10px 10px;
     overflow: hidden;
-    padding-top: 70%;
     text-align: center;
     transition: all .4s ease-in-out;
 }
@@ -535,7 +528,7 @@ footer {
 .showcase .showcase-element .showcase-content {
     background-color: rgba(0,0,0,.4);
     border-top: 3px solid rgb(241, 137, 33);
-    height: 100%;
+    flex-basis: 33%;
     transition: all .4s ease-out;
 }
 
