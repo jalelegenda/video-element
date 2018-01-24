@@ -312,6 +312,7 @@ main {
 #usluge {
     flex-flow: column;
     justify-content: center;
+    min-height: initial;
     padding-bottom: 20px;
 }
 
