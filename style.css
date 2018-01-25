@@ -20,7 +20,8 @@ body {
     margin: 0;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    text-shadow: 1px 2px 5px rgba(0,0,0,.5);
+    text-shadow: 1px 2px 5px rgba(0,0,0,.75);
+    transition: all .4s ease;
 }
 
 article,
@@ -51,17 +52,20 @@ h4,
 p,
 ol,
 ul
- {
+{
     margin: 0;
     padding: 0;
 }
 
-h1,
+h1 {
+    font-family: 'blowbrush', 'sans-serif';
+    letter-spacing: 4px;
+}
+
 h2,
 h3,
 h4 {
-    font-family: blowbrush, sans-serif;
-    letter-spacing: .05em;
+    font-family: 'Titillium Web', 'Helvetica', 'sans-serif';
 }
 
 li {
@@ -97,6 +101,10 @@ button {
     padding: 0;
 }
 
+i {
+    transition: all .4s ease;
+}
+
 img {
     border: 0;
     height: auto;
@@ -111,13 +119,15 @@ h1 {
     font-size: 4em;
 }
 
-h2, h3 {
+h2 {
     color: rgb(241, 137, 33);
     font-size: 2em;
 }
 
 h3 {
-    font-family: 'Titillium Web', Helvetica, Arial, sans-serif
+    color: rgb(241, 137, 33);
+    font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+    font-size: 1.7em;
 }
 
 h3, h4, p {
@@ -135,11 +145,17 @@ h4 {
     }
 
     h2, h3 {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
     h4 {
-        font-size: 1em;
+        font-size: 1.2em;
+    }
+}
+
+@media all and (max-width: 480px){
+    p {
+        font-size: .7em;
     }
 }
 
@@ -174,10 +190,10 @@ article p {
         background-color: rgba(0,0,0,.6);
         display: flex;
         flex-flow: column;
-        height: 170px;
+        height: 190px;
         justify-content: center;
         position: fixed;
-        margin-top: -170px;
+        margin-top: -190px;
         transition: margin .4s ease-in-out;
         width: 100%;
         z-index: 500;
@@ -213,9 +229,8 @@ nav ul {
     margin-top: 5px;
 }
 
-nav li {
+ul li {
     margin: 5px 5px;
-    text-align: left;
 }
 
 @media (hover: hover) {
@@ -250,9 +265,24 @@ main {
 
 /*IDS*/
 
+#eng,
+#hrv {
+    border-radius: 32px;
+    font-size: .7em;
+    height: 32px;
+    position: fixed;
+    text-align: center;
+    width: 32px;
+    z-index: 1000;
+}
+
+#eng {
+    right: 10px;
+    top: 10px;
+}
 
 #home {        
-    background-image: url("images/home1.jpeg");
+    background-image: url("images/home.jpeg");
     background-position: 53% 90%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -267,6 +297,16 @@ main {
     width: 175px;
 }
 
+@media all and (max-width: 900px){
+    #home-logo {
+        width: 125px;
+    }
+}
+
+#hrv {
+    right: 50px;
+    top: 10px;
+}
 
 #main-navigation {
     margin-top: 80px
@@ -284,12 +324,19 @@ main {
 #menu-trigger {
     background: rgba(0,0,0,.4);
     border-radius: 3px;
-    height: 30px;
+    height: 50px;
     left: 10px;
     position: fixed;
     top: 10px;
-    width: 33px;
+    width: 55px;
     z-index: 1000;
+}
+
+@media all and (max-width: 900px) {
+    #menu-trigger {
+        height: 30px;
+        width: 33px;
+    }
 }
 
 #menu-trigger:active {
@@ -297,16 +344,20 @@ main {
 }
 
 #o-nama {
-    background-image: url("images/o-nama.jpg");
+    background-image: url("images/o-nama1.jpg");
     background-position: 46% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #o-nama article {
-    background-color: rgba(0,0,0,.35);
+    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0, 0, 0, .7));
     min-height: 200px;
     padding: 6px;
+}
+
+#o-nama article span {
+    font-size: 1.2em;
 }
 
 #usluge {
@@ -328,7 +379,7 @@ main {
 }
 
 #marketing {
-    background-image: url("images/marketing.jpg");
+    background-image: url("images/marketing.jpeg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -348,16 +399,20 @@ footer {
     background-size: cover;
 }
 
+#info {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 #kontakt {
     background-color: rgba(0,0,0,.6);
     display: flex;
     flex-flow: column;
-    min-height: 100px;
+    height: 150px;
 }
 
-#info {
-    display: flex;
-    flex-flow: row wrap;
+#kontakt h3 {
+    margin-bottom: 5px;
 }
 
 #kontakt p {
@@ -371,12 +426,20 @@ footer {
 
 @media all and (max-width: 900px)
 {
+    #kontakt {
+        height: auto;
+    }
+
     #info {
         flex-flow: column;
         max-height: 200px;
     }
 }
 /*Utility*/
+
+.active-trans {
+    background: rgba(0,0,0,.4);
+}
 
 .circle-frame {
     background-color: rgba(0,0,0,.4);
@@ -523,14 +586,20 @@ footer {
     margin: 10px 0 10px 10px;
     overflow: hidden;
     text-align: center;
-    transition: all .4s ease-in-out;
 }
 
 .showcase .showcase-element .showcase-content {
     background-color: rgba(0,0,0,.4);
     border-top: 3px solid rgb(241, 137, 33);
-    flex-basis: 33%;
-    transition: all .4s ease-out;
+    height: 250px;
+}
+
+.showcase .showcase-element .showcase-content h2 {
+    margin-top: 13px;
+}
+
+.showcase .showcase-element .showcase-content p {
+    margin: 10px 3px 0 3px;
 }
 
 .showcase .showcase-element .showcase-content .circle-frame {
@@ -538,12 +607,11 @@ footer {
     border-radius: 50px;
     height: 100px;
     margin: -50px auto 0;
-    transition: all .4s ease;
     width: 100px;
 }
 
 .showcase .showcase-element .showcase-content .circle-frame i {
-    margin-top: 12.5px;
+    margin-top: 18px;
 }
 
 .social-links {
@@ -553,21 +621,15 @@ footer {
     margin: 10px 0;
 }
 
-.social-links li {
-    padding: 0 10px;
-}
 
 @media all and (max-width: 900px) {
     .showcase {
         flex-flow: column;
     }
 
-    .showcase .showcase-element,
-     {
-        height: 250px;
-        margin: 10px 0 10px 10px;
-        padding-top: 250px;
-    }
+    .showcase .showcase-element .showcase-content {
+       height: 200px;
+   }
 }
 
 /*Colors*/
