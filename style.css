@@ -130,7 +130,7 @@ h3 {
     font-size: 1.7em;
 }
 
-h3, h4, p {
+h2, h3, h4, p {
     text-align: center;
 }
 
@@ -294,12 +294,12 @@ main {
     align-self: center;
     filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.43));
     margin-top: 50px;
-    width: 175px;
+    width: 200px;
 }
 
 @media all and (max-width: 900px){
     #home-logo {
-        width: 125px;
+        width: 150px;
     }
 }
 
