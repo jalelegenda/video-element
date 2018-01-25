@@ -308,6 +308,21 @@ main {
     top: 10px;
 }
 
+#najava {
+    font-size: 1.8em;
+    left: 50%;
+    height: 200px;
+    position: fixed;
+    margin-left: -200px;
+    margin-top: -100px;
+    opacity: 0;
+    top: 50%;
+    transition: opacity 2s ease;
+    visibility: hidden;
+    width: 400px;
+    z-index: 1000;
+}
+
 #main-navigation {
     margin-top: 80px
 }

@@ -224,6 +224,19 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
+    function showAnnounce() {
+        var ann = document.querySelector("#najava");
+        ann.style.visibility = "visible"
+        ann.style.opacity = 1;
+        setTimeout(function() {
+            ann.style.opacity = 0;
+        }, 3000);
+
+        setTimeout(function() {
+            ann.style.visibility = "hidden";
+        }, 5000);
+    }
+
     function translatePage(con, trans) {
         for(var part in trans){
             if(Object.keys(trans[part]).length !== 0) {
@@ -281,6 +294,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     els.eng.addEventListener("click", function(e) {
         e.preventDefault();
+        showAnnounce();
         if(e.target.classList.contains("active-trans")){
             return;
         }
@@ -291,6 +305,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     els.hrv.addEventListener("click", function(e) {
         e.preventDefault();
+        showAnnounce();
         if(e.target.classList.contains("active-trans")){
             return;
         }
