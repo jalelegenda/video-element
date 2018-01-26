@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", () => {
     console.log("Enjoy our website!");
         
     var els = {
@@ -27,148 +27,81 @@ document.addEventListener("DOMContentLoaded", function(){
             usluge:     document.querySelector("#usluge-link-res"),
             kontakt:    document.querySelector("#kontakt-link-res")
         },
-        trans:      document.querySelectorAll("trans")
     }
 
 
 
     var content = {
-        links: {
-            main: {
-                home: document.querySelector("#home-link a"),
-                oNama: document.querySelector("#o-nama-link a"),
-                usluge: document.querySelector("#usluge-link a"),
-                kontakt: document.querySelector("#kontakt-link a")
-            },
-            res: {
-                home: document.querySelector("#home-link-res a"),
-                oNama: document.querySelector("#o-nama-link-res a"),
-                usluge: document.querySelector("#usluge-link-res a"),
-                kontakt: document.querySelector("#kontakt-link-res a")
-            }
-        },
-        home: {
-            h1: document.querySelector("#home h1"),
-            p: document.querySelector("#home p")
-        },
-        oNama:{
-            h1: document.querySelector("#o-nama h1"),
-            h3: document.querySelector("#o-nama h3"),
-            p: document.querySelector("#o-nama p")
-        },
-        usluge:{
-            h1: document.querySelector("#usluge h1"),
-            promidzba: {
-                h2: document.querySelector("#promidzba h2"),
-                p: document.querySelector("#promidzba p")
-            },
-            marketing: {
-                h2: document.querySelector("#marketing h2"),
-                p: document.querySelector("#marketing p")
-            },
-            edukacija: {
-                h2: document.querySelector("#edukacija h2"),
-                p: document.querySelector("#edukacija p")
-            }
-        },
-        kontakt:{
-            h1: document.querySelector("#footer h1"),
-            adresa: document.querySelector("#adresa h3"),
-            tel: document.querySelector("#tel h3")
-        }
+        oNamaL: document.querySelector("#o-nama-link a"),
+        uslugeL: document.querySelector("#usluge-link a"),
+        kontaktL: document.querySelector("#kontakt-link a"),
+        oNamaR: document.querySelector("#o-nama-link-res a"),
+        uslugeR: document.querySelector("#usluge-link-res a"),
+        kontaktR: document.querySelector("#kontakt-link-res a"),
+        homeh1: document.querySelector("#home h1"),
+        homep: document.querySelector("#home p"),
+        oNamah1: document.querySelector("#o-nama h1"),
+        oNamah2: document.querySelector("#o-nama h2"),
+        oNamap: document.querySelector("#o-nama p"),
+        uslugeh1: document.querySelector("#usluge h1"),
+        uslugePromidzbah3: document.querySelector("#promidzba h3"),
+        uslugePromidzbap: document.querySelector("#promidzba p"),
+        uslugeMarketingh3: document.querySelector("#marketing h3"),
+        uslugepMarketingp: document.querySelector("#marketing p"),
+        uslugeEdukacijah3: document.querySelector("#edukacija h3"),
+        uslugeEdukacijap: document.querySelector("#edukacija p"),
+        kontakth1: document.querySelector("#footer h1"),
+        kontaktadresa: document.querySelector("#adresa h3"),
+        kontakttel: document.querySelector("#tel h3")
     }
 
-    var engTranslations = {
-        links: {
-            main: {
-                oNama: "About us",
-                usluge: "Services",
-                kontakt: "Contact"
-            },
-            res: {
-                oNama: "About us",
-                usluge: "Services",
-                kontakt: "Contact"
-            }
-        },
-        home: {
-            h1: "Welcome!",
-            p: "This is the place for everybody who wishes to know more about digital world, whether you are private or public person, product, service or brand."
-        },
-        oNama:{
-            h1: "About us",
-            h3: "We are Diano & Maya and social networks are our passion!",
-            p: "After several years of using, learning and exploring Facebook, Instagram & YouTube, we decided to share all knowledge with you! Today you need more than „knowing the basic“ to advertise your product or service on social networks.",
-            span: "Don't waste your money!"
-        },
-        usluge:{
-            h1: "Services",
-            promidzba: {
-                h2: "Review",
-                p: "Advertise your product on our channels."
-            },
-            marketing: {
-                h2: "Community manager",
-                p: "Strategically posting on YOUR social network."
-            },
-            edukacija: {
-                h2: "Training",
-                p: "Book your group or individual training in Facebook and/or Instagram!"
-            }
-        },
-        kontakt:{
-            h1: "Contact",
-            adresa: "Address",
-            tel: "Telephone"
-        }
-    }
-    
-
-    var hrvTranslations = {
-        links: {
-            main: {
-                oNama: "O nama",
-                usluge: "Usluge",
-                kontakt: "Kontakt"
-            },
-            res: {
-                oNama: "O nama",
-                usluge: "Usluge",
-                kontakt: "Kontakt"
-            }
-        },
-        home: {
-            h1: "Dobro došli!",
-            p: "Ovo je mjesto za sve koji žele znati više o digitalnom svijetu, bilo da se radi o privatnoj ili javnoj osobi, proizvodu, usluzi ili brandu."
-        },
-        oNama:{
-            h1: "O nama",
-            h3: "Mi smo Diano & Maya i društvene mreže su naša strast!",
-            p: "Nakon višegodišnjeg korištenja, učenja i istraživanja Facebook-a, Instagram-a i YouTube-a, odlučili smo svo naše znanje podijeliti sa vama! Danas nam je potrebno mnogo više od osnova poznavanja društvenih mreža kako bi oglašavali svoj proizvod ili uslugu na društvenim mrežama.",
-            span: "Ne trošite novce uzalud!"
-        },
-        usluge:{
-            h1: "Usluge",
-            promidzba: {
-                h2: "Review",
-                p: "Promidžba Vaše usluge/proizvoda na NAŠIM društvenim mrežama."
-            },
-            marketing: {
-                h2: "Marketing na društvenim mrežama",
-                p: "Sadržajno i strateško vođenje VAŠIH društvenih stranica."
-            },
-            edukacija: {
-                h2: "Edukacija",
-                p: "Dogovori individualnu ili grupnu Facebook i/ili Instagram radionicu."
-            }
-        },
-        kontakt:{
-            h1: "Kontakt",
-            adresa: "Adresa",
-            tel: "Telefon"
-        }
+    const engTranslations = {
+        oNamaL: "About us",
+        uslugeL: "Services",
+        kontaktL: "Contact",
+        oNamaR: "About us",
+        uslugeR: "Services",
+        kontaktR: "Contact",
+        homeh1: "Welcome!",
+        homep: "This is the place for everybody who wishes to know more about digital world, whether you are private or public person, product, service or brand.",
+        oNamah1: "About us",
+        oNamah2: "We are Diano &amp; Maya and social networks are our passion!",
+        oNamap: "After several years of using, learning and exploring Facebook, Instagram & YouTube, we decided to share all knowledge with you! Today you need more than „knowing the basic“ to advertise your product or service on social networks.<br /><span>Don't waste your money!</span>",
+        uslugeh1: "Services",
+        uslugePromidzbah3: "Review",
+        uslugePromidzbap: "Advertise your product on OUR channels.",
+        uslugeMarketingh3: "Community management",
+        uslugepMarketingp: "Strategically posting on YOUR social network.",
+        uslugeEdukacijah3: "Training",
+        uslugeEdukacijap: "Book your group or individual training in Facebook and/or Instagram.",
+        kontakth1: "Contact",
+        kontaktadresa: "Address",
+        kontakttel: "Telephone"
     }
 
+    const hrvTranslations = {
+        oNamaL: "O nama",
+        uslugeL: "Usluge",
+        kontaktL: "Kontakt",
+        oNamaR: "O nama",
+        uslugeR: "Usluge",
+        kontaktR: "Kontakt",
+        homeh1: "Dobro došli!",
+        homep: "Ovo je mjesto za sve koji žele znati više o digitalnom svijetu, bilo da se radi o privatnoj ili javnoj osobi, proizvodu, usluzi ili brandu.",
+        oNamah1: "O nama",
+        oNamah2: "Mi smo Diano &amp; Maya i društvene mreže su naša strast!",
+        oNamap: "Nakon višegodišnjeg korištenja, učenja i istraživanja Facebook-a, Instagram-a i YouTube-a, odlučili smo svo naše znanje podijeliti sa vama! Danas nam je potrebno mnogo više od osnova poznavanja društvenih mreža kako bi oglašavali svoj proizvod ili uslugu na društvenim mrežama.<br /> <span>Ne trošite novce uzalud!</span>",
+        uslugeh1: "Usluge",
+        uslugePromidzbah3: "Review",
+        uslugePromidzbap: "Promidžba Vaše usluge/proizvoda na NAŠIM društvenim mrežama.",
+        uslugeMarketingh3: "Marketing na društvenim mrežama",
+        uslugepMarketingp: "Sadržajno i strateško vođenje VAŠIH društvenih stranica.",
+        uslugeEdukacijah3: "Edukacija",
+        uslugeEdukacijap: "Dogovori individualnu ili grupnu Facebook i/ili Instagram radionicu.",
+        kontakth1: "Kontakt",
+        kontaktadresa: "Adresa",
+        kontakttel: "Telefon"
+    }
 
     //Functions
 
@@ -206,9 +139,9 @@ document.addEventListener("DOMContentLoaded", function(){
         
     function armLinks(links){
         for(var link in links) {
-            (function() {
+            (() => {
                 var l = link;
-                links[l].addEventListener("click", function(e){
+                links[l].addEventListener("click", (e) => {
                     e.preventDefault();
                     var rect = els.areas[l].getBoundingClientRect();
                     window.scrollBy(0, rect.top);
@@ -228,23 +161,13 @@ document.addEventListener("DOMContentLoaded", function(){
         var ann = document.querySelector("#najava");
         ann.style.visibility = "visible"
         ann.style.opacity = 1;
-        setTimeout(function() {
+        setTimeout(() =>  {
             ann.style.opacity = 0;
         }, 3000);
 
-        setTimeout(function() {
+        setTimeout(() =>  {
             ann.style.visibility = "hidden";
         }, 5000);
-    }
-
-    function translatePage(con, trans) {
-        for(var part in trans){
-            if(Object.keys(trans[part]).length !== 0) {
-                translatePage(con[part], trans[part]);
-            }
-            console.log(trans[part]);
-            //con[part].innerHTML = trans[part];
-        }
     }
 
 
@@ -259,7 +182,35 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //Events
 
-    els.menuButton.addEventListener('click', function(){
+    els.eng.addEventListener("click", () => {
+        if(els.eng.classList.contains("active-trans")){
+            return;
+        }
+        els.hrv.classList.remove("active-trans");
+        els.eng.classList.add("active-trans");
+        for(var part in content){
+            (() => {
+                p = part;
+                content[p].innerHTML = engTranslations[p];
+            })();
+        }
+    });
+
+    els.hrv.addEventListener("click", () => {
+        if(els.hrv.classList.contains("active-trans")){
+            return;
+        }
+        els.eng.classList.remove("active-trans");
+        els.hrv.classList.add("active-trans");
+        for(var part in content){
+            (() => {
+                p = part;
+                content[p].innerHTML = hrvTranslations[p];
+            })();
+        }
+    });
+    
+    els.menuButton.addEventListener('click', () => {
         var headerTopMargin = window.getComputedStyle(els.header, null)
                                 .getPropertyValue("margin-top");
         var mainWidth = window.getComputedStyle(els.main, null)
@@ -292,33 +243,11 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
-    els.eng.addEventListener("click", function(e) {
-        e.preventDefault();
-        showAnnounce();
-        if(e.target.classList.contains("active-trans")){
-            return;
-        }
-        e.target.classList.add("active-trans");
-        els.hrv.classList.remove("active-trans");
-        translatePage(content, engTranslations);
-    });
-
-    els.hrv.addEventListener("click", function(e) {
-        e.preventDefault();
-        showAnnounce();
-        if(e.target.classList.contains("active-trans")){
-            return;
-        }
-        e.target.classList.add("active-trans");
-        els.eng.classList.remove("active-trans");
-        translatePage(content, engTranslations);
-    });
-
-    window.addEventListener("scroll", function(){
+    window.addEventListener("scroll", () => {
         activateLink();
     });
     
-    window.addEventListener("resize", function(){
+    window.addEventListener("resize", () => {
         els.header.style.marginTop = -190;
         els.main.style.width = "100%";
         els.nav.style.width = 0;
@@ -331,5 +260,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     window.dispatchEvent(new Event("resize"));
+
 });
 
