@@ -359,7 +359,7 @@ main {
 }
 
 #o-nama {
-    background-image: url("images/o-nama1.jpg");
+    background-image: url("images/o-nama.jpeg");
     background-position: 46% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -386,22 +386,22 @@ main {
     box-shadow: initial;
 }
 
-#promidzba {
-    background-image: url("images/promidzba.jpg");
+#review {
+    background-image: url("images/review.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #marketing {
-    background-image: url("images/marketing.jpeg");
+    background-image: url("images/marketing.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#edukacija {
-    background-image: url("images/edukacija.jpg");
+#education {
+    background-image: url("images/education.jpg");
     background-position: 30% 25%;
     background-repeat: no-repeat;
     background-size: cover;
