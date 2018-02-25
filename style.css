@@ -282,7 +282,7 @@ main {
 }
 
 #home {        
-    background-image: url("images/home.jpeg");
+    background-image: url("images/video-element-marketing.jpeg");
     background-position: 53% 90%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -359,7 +359,7 @@ main {
 }
 
 #o-nama {
-    background-image: url("images/o-nama.jpeg");
+    background-image: url("images/save-money-on-marketing.jpeg");
     background-position: 46% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -387,21 +387,21 @@ main {
 }
 
 #review {
-    background-image: url("images/review.jpg");
+    background-image: url("images/market-on-our-social-platforms.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #marketing {
-    background-image: url("images/marketing.jpg");
+    background-image: url("images/social-network-marketing.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #education {
-    background-image: url("images/education.jpg");
+    background-image: url("images/education-on-social-marketing.jpg");
     background-position: 30% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -409,7 +409,7 @@ main {
 
 
 footer {
-    background-image: url("images/footer.jpg");
+    background-image: url("images/video-element-contact-and-info.jpg");
     background-position: 40% 30%;
     background-size: cover;
 }

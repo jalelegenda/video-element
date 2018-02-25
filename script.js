@@ -156,21 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
             els.responsiveLinks[el].classList.remove("active");
         }
     }
-
-    function showAnnounce() {
-        var ann = document.querySelector("#najava");
-        ann.style.visibility = "visible"
-        ann.style.opacity = 1;
-        setTimeout(() =>  {
-            ann.style.opacity = 0;
-        }, 3000);
-
-        setTimeout(() =>  {
-            ann.style.visibility = "hidden";
-        }, 5000);
-    }
-
-
     
     //Initialization
     
