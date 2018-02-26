@@ -237,6 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
         els.main.style.width = "100%";
         els.nav.style.width = 0;
         var fa = els.menuButton.querySelector("i");
+        fa.classList.remove("fa-times");
+        fa.classList.add("fa-bars");
         if(window.innerWidth > 900 && !fa.classList.contains("fa-2x")) {
             fa.classList.add("fa-2x");
         } else if(window.innerWidth < 900) {
