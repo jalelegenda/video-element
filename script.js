@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
         els.eng.classList.add("active-trans");
         for(var part in content){
             (() => {
-                p = part;
+                let p = part;
                 content[p].innerHTML = engTranslations[p];
             })();
         }
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         els.hrv.classList.add("active-trans");
         for(var part in content){
             (() => {
-                p = part;
+                let p = part;
                 content[p].innerHTML = hrvTranslations[p];
             })();
         }
